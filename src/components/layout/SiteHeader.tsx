@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { MobileMenu } from "@/components/layout/MobileMenu";
+import { Button } from "@/components/ui/Button";
 
 const navigation = [
   { name: "All Tools", href: "/tools" },
@@ -8,8 +10,8 @@ const navigation = [
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-slate-200 bg-white">
-      <div className="site-container flex min-h-16 items-center justify-between gap-6">
+    <header className="relative z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="site-container flex min-h-16 items-center justify-between gap-5">
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-bold tracking-tight text-slate-950"
@@ -42,12 +44,13 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link
-          href="/tools"
-          className="rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-        >
-          Explore tools
-        </Link>
+        <div className="flex items-center gap-2">
+          <Button href="/tools" className="hidden sm:inline-flex">
+            Explore tools
+          </Button>
+
+          <MobileMenu />
+        </div>
       </div>
     </header>
   );

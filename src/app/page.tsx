@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { ToolSearch } from "@/components/search/ToolSearch";
 import { CategoryCard } from "@/components/tools/CategoryCard";
 import { ToolCard } from "@/components/tools/ToolCard";
 import { activeCategories } from "@/data/categories";
-import { featuredTools } from "@/data/tools";
+import { featuredTools, tools } from "@/data/tools";
 
 const benefits = [
   {
@@ -46,29 +47,18 @@ export default function Home() {
             installing software or creating an account.
           </p>
 
-          <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
-            <label htmlFor="tool-search" className="sr-only">
-              Search tools
-            </label>
-
-            <input
-              id="tool-search"
-              type="search"
-              placeholder="Search tools..."
-              className="min-h-12 flex-1 rounded-xl border border-slate-300 bg-white px-4 text-slate-950 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-            />
-
-            <Link
-              href="/tools"
-              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-blue-600 px-6 font-semibold text-white transition-colors hover:bg-blue-700"
-            >
-              Explore tools
-            </Link>
+          <div className="mt-8">
+            <ToolSearch tools={tools} />
           </div>
 
-          <p className="mt-4 text-sm text-slate-500">
-            Search functionality will be activated during the foundation phase.
-          </p>
+          <div className="mt-5">
+            <Link
+              href="/tools"
+              className="text-sm font-semibold text-blue-700 hover:text-blue-800"
+            >
+              Or browse all planned tools →
+            </Link>
+          </div>
         </div>
       </section>
 
