@@ -19,6 +19,30 @@ export const tools: Tool[] = [
     status: "planned",
     featured: true,
     icon: "🖼️",
+    privacyNote:
+      "Images are intended to be processed directly in your browser. Files are not planned to be uploaded to FreeTaskKit servers.",
+    howToUse: [
+      "Select or drag an image into the compressor workspace.",
+      "Choose the desired compression level and process the image.",
+      "Review the reduced file size and download the compressed image.",
+    ],
+    faq: [
+      {
+        question: "Is the Image Compressor free to use?",
+        answer:
+          "Yes. The Image Compressor is planned as a free browser-based tool without requiring an account.",
+      },
+      {
+        question: "Will my images be uploaded to a server?",
+        answer:
+          "The planned implementation processes images locally in your browser whenever supported, so image files do not need to be uploaded to FreeTaskKit servers.",
+      },
+      {
+        question: "Which image formats will be supported?",
+        answer:
+          "The initial target is JPG, PNG, and WebP. Final supported formats will be confirmed when the compressor engine is implemented and tested.",
+      },
+    ],
   },
   {
     id: "image-resizer",
@@ -116,4 +140,19 @@ export const featuredTools = tools.filter((tool) => tool.featured);
 
 export function getToolsByCategory(category: Tool["category"]) {
   return tools.filter((tool) => tool.category === category);
+}
+
+export function getToolBySlug(slug: string) {
+  return tools.find((tool) => tool.slug === slug);
+}
+
+export function getRelatedTools(tool: Tool, limit = 3) {
+  return tools
+    .filter(
+      (candidate) =>
+        candidate.id !== tool.id &&
+        candidate.category === tool.category &&
+        candidate.status === "published",
+    )
+    .slice(0, limit);
 }

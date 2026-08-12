@@ -8,6 +8,11 @@ export type ToolCategory =
   | "documents"
   | "developer";
 
+export interface ToolFaq {
+  question: string;
+  answer: string;
+}
+
 export interface Tool {
   id: string;
   name: string;
@@ -19,4 +24,8 @@ export interface Tool {
   status: ToolStatus;
   featured: boolean;
   icon: string;
+
+  howToUse?: string[];
+  privacyNote?: string;
+  faq?: ToolFaq[];
 }
