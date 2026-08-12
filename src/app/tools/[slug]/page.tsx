@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ToolLayout } from "@/components/tools/ToolLayout";
-import { ToolPlaceholder } from "@/components/tools/ToolPlaceholder";
+import { ToolWorkspace } from "@/components/tools/ToolWorkspace";
 import {
   getRelatedTools,
   getToolBySlug,
@@ -64,9 +64,7 @@ export default async function ToolPage({
       tool={tool}
       relatedTools={relatedTools}
     >
-      <ToolPlaceholder
-        title={`${tool.name} is being prepared`}
-      />
+      <ToolWorkspace tool={tool} />
     </ToolLayout>
   );
 }
