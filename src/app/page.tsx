@@ -56,7 +56,7 @@ export default function Home() {
               href="/tools"
               className="text-sm font-semibold text-blue-700 hover:text-blue-800"
             >
-              Or browse all planned tools →
+              Or browse all tools →
             </Link>
           </div>
         </div>
@@ -71,12 +71,11 @@ export default function Home() {
               </p>
 
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950">
-                Planned tools
+                Featured tools
               </h2>
 
               <p className="mt-3 max-w-2xl text-slate-600">
-                These are the first practical tools being prepared for the
-                FreeTaskKit launch.
+                Explore practical tools for everyday digital tasks.
               </p>
             </div>
 

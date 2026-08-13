@@ -50,17 +50,54 @@ export const tools: Tool[] = [
     slug: "image-resizer",
     category: "image",
     description:
-      "Resize images by width and height while keeping the correct proportions.",
+      "Resize JPG, PNG, and WebP images by width and height directly in your browser.",
     shortDescription: "Resize images for forms, websites, and social media.",
     keywords: [
       "resize image",
       "change image dimensions",
       "photo resizer",
       "image size",
+      "resize jpg",
+      "resize png",
+      "resize webp",
     ],
-    status: "planned",
+    status: "published",
     featured: true,
     icon: "↔️",
+    privacyNote:
+      "Images are processed directly in your browser. Your files are not uploaded to FreeTaskKit servers.",
+    howToUse: [
+      "Select or drag a JPG, PNG, or WebP image into the resizer workspace.",
+      "Set the target width and height, keep the aspect ratio if needed, or choose a quick preset.",
+      "Resize the image, review the new dimensions and file size, then download the resized file.",
+    ],
+    faq: [
+      {
+        question: "Is the Image Resizer free to use?",
+        answer:
+          "Yes. The Image Resizer is free to use and does not require an account.",
+      },
+      {
+        question: "Are my images uploaded to a server?",
+        answer:
+          "No. Image resizing is performed locally in your browser, so your image files are not uploaded to FreeTaskKit servers.",
+      },
+      {
+        question: "Which image formats are supported?",
+        answer:
+          "The current version supports JPG, PNG, and WebP images up to 15 MB.",
+      },
+      {
+        question: "Can I keep the original image proportions?",
+        answer:
+          "Yes. Maintain aspect ratio is enabled by default, so changing the width automatically adjusts the height and vice versa.",
+      },
+      {
+        question: "Does resizing change the image format?",
+        answer:
+          "No. The resized image keeps the same format as the original JPG, PNG, or WebP file.",
+      },
+    ],
   },
   {
     id: "qr-code-generator",
