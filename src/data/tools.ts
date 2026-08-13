@@ -16,11 +16,11 @@ export const tools: Tool[] = [
       "compress png",
       "image optimizer",
     ],
-    status: "planned",
+    status: "published",
     featured: true,
     icon: "🖼️",
     privacyNote:
-      "Images are intended to be processed directly in your browser. Files are not planned to be uploaded to FreeTaskKit servers.",
+      "Images are processed directly in your browser. Your files are not uploaded to FreeTaskKit servers.",
     howToUse: [
       "Select or drag an image into the compressor workspace.",
       "Choose the desired compression level and process the image.",
@@ -30,17 +30,17 @@ export const tools: Tool[] = [
       {
         question: "Is the Image Compressor free to use?",
         answer:
-          "Yes. The Image Compressor is planned as a free browser-based tool without requiring an account.",
+          "Yes. The Image Compressor is free to use and does not require an account.",
       },
       {
         question: "Will my images be uploaded to a server?",
         answer:
-          "The planned implementation processes images locally in your browser whenever supported, so image files do not need to be uploaded to FreeTaskKit servers.",
+          "Images are processed locally in your browser, so they do not need to be uploaded to FreeTaskKit servers.",
       },
       {
         question: "Which image formats will be supported?",
         answer:
-          "The initial target is JPG, PNG, and WebP. Final supported formats will be confirmed when the compressor engine is implemented and tested.",
+          "The current version supports JPG, PNG, and WebP images up to 15 MB.",
       },
     ],
   },
