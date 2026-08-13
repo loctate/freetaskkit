@@ -21,8 +21,7 @@ export default function ToolsPage() {
         </h1>
 
         <p className="mt-4 max-w-2xl leading-7 text-slate-600">
-          Explore the practical tools currently planned for FreeTaskKit. Tools
-          will become available one by one as development progresses.
+          Explore free practical tools for everyday digital tasks. More tools will be added over time.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
