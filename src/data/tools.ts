@@ -105,17 +105,59 @@ export const tools: Tool[] = [
     slug: "qr-code-generator",
     category: "business",
     description:
-      "Create downloadable QR codes for links, text, and everyday sharing.",
+      "Create downloadable QR codes for links and text directly in your browser.",
     shortDescription: "Create a QR code for links or text.",
     keywords: [
       "qr code",
       "qr generator",
       "create qr",
       "download qr code",
+      "qr code maker",
+      "url qr code",
+      "text qr code",
     ],
-    status: "planned",
+    status: "published",
     featured: true,
     icon: "▦",
+    privacyNote:
+      "QR codes are generated directly in your browser. The URL or text you enter is not uploaded to FreeTaskKit servers.",
+    howToUse: [
+      "Choose URL or Text and enter the content you want to encode.",
+      "Select the QR image size and error correction level, then generate the QR code.",
+      "Scan the preview if needed and download the finished QR code as a PNG file.",
+    ],
+    faq: [
+      {
+        question: "Is the QR Code Generator free to use?",
+        answer:
+          "Yes. The QR Code Generator is free to use and does not require an account.",
+      },
+      {
+        question: "Is my URL or text uploaded to a server?",
+        answer:
+          "No. QR generation happens locally in your browser, so the content you enter is not uploaded to FreeTaskKit servers.",
+      },
+      {
+        question: "Can I create QR codes for both URLs and text?",
+        answer:
+          "Yes. The generator supports HTTP and HTTPS website URLs as well as ordinary text.",
+      },
+      {
+        question: "Which QR image sizes are available?",
+        answer:
+          "The current version can generate 256 × 256, 512 × 512, and 1024 × 1024 pixel QR images.",
+      },
+      {
+        question: "What is error correction?",
+        answer:
+          "Error correction helps a QR code remain readable if part of it is damaged or obscured. Higher levels add more recovery data but can make the QR pattern denser.",
+      },
+      {
+        question: "What format is downloaded?",
+        answer:
+          "QR codes are downloaded as PNG image files.",
+      },
+    ],
   },
   {
     id: "whatsapp-link-generator",
