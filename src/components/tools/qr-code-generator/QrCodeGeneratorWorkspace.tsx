@@ -3,7 +3,6 @@
 import QRCode from "qrcode";
 import {
   ChangeEvent,
-  useEffect,
   useRef,
   useState,
 } from "react";
@@ -27,10 +26,10 @@ export function QrCodeGeneratorWorkspace() {
   const [hasQrCode, setHasQrCode] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
 
-  useEffect(() => {
+  function invalidateQrCode() {
     setHasQrCode(false);
     setError(null);
-  }, [mode, value, size, errorCorrectionLevel]);
+  }
 
   function validateValue() {
     const trimmedValue = value.trim();
@@ -139,6 +138,7 @@ export function QrCodeGeneratorWorkspace() {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     setValue(event.target.value);
+    invalidateQrCode();
   }
 
   return (
@@ -162,7 +162,10 @@ export function QrCodeGeneratorWorkspace() {
         <div className="mt-7 grid grid-cols-2 gap-3 rounded-2xl bg-slate-100 p-1.5">
           <button
             type="button"
-            onClick={() => setMode("url")}
+            onClick={() => {
+              setMode("url");
+              invalidateQrCode();
+            }}
             className={[
               "rounded-xl px-4 py-2.5 text-sm font-semibold transition",
               mode === "url"
@@ -175,7 +178,10 @@ export function QrCodeGeneratorWorkspace() {
 
           <button
             type="button"
-            onClick={() => setMode("text")}
+            onClick={() => {
+              setMode("text");
+              invalidateQrCode();
+            }}
             className={[
               "rounded-xl px-4 py-2.5 text-sm font-semibold transition",
               mode === "text"
@@ -227,9 +233,10 @@ export function QrCodeGeneratorWorkspace() {
 
             <select
               value={size}
-              onChange={(event) =>
-                setSize(Number(event.target.value))
-              }
+              onChange={(event) => {
+                setSize(Number(event.target.value));
+                invalidateQrCode();
+              }}
               className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-3 text-slate-950 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
             >
               {QR_SIZES.map((qrSize) => (
@@ -247,11 +254,12 @@ export function QrCodeGeneratorWorkspace() {
 
             <select
               value={errorCorrectionLevel}
-              onChange={(event) =>
+              onChange={(event) => {
                 setErrorCorrectionLevel(
                   event.target.value as ErrorCorrectionLevel,
-                )
-              }
+                );
+                invalidateQrCode();
+              }}
               className="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-3 text-slate-950 outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
             >
               <option value="L">Low</option>
