@@ -5,6 +5,7 @@ import { ImageResizerWorkspace } from "@/components/tools/image-resizer/ImageRes
 import { QrCodeGeneratorWorkspace } from "@/components/tools/qr-code-generator/QrCodeGeneratorWorkspace";
 import { WhatsAppLinkGeneratorWorkspace } from "@/components/tools/whatsapp-link-generator/WhatsAppLinkGeneratorWorkspace";
 import { PercentageCalculatorWorkspace } from "@/components/tools/percentage-calculator/PercentageCalculatorWorkspace";
+import { TextCleanerWorkspace } from "@/components/tools/text-cleaner/TextCleanerWorkspace";
 
 interface ToolWorkspaceProps {
   tool: Tool;
@@ -28,6 +29,9 @@ export function ToolWorkspace({
 
     case "percentage-calculator":
       return <PercentageCalculatorWorkspace />;
+
+    case "text-cleaner":
+      return <TextCleanerWorkspace />;
 
     default:
       return (
