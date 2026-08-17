@@ -225,17 +225,60 @@ export const tools: Tool[] = [
     slug: "percentage-calculator",
     category: "calculators",
     description:
-      "Calculate percentages, increases, decreases, and percentage differences.",
+      "Calculate percentages, increases, decreases, and percentage differences instantly in your browser.",
     shortDescription: "Calculate percentages for everyday needs.",
     keywords: [
       "percentage calculator",
       "percent",
       "discount calculator",
       "percentage increase",
+      "percentage decrease",
+      "percentage difference",
+      "percent of number",
+      "percentage change",
     ],
-    status: "planned",
+    status: "published",
     featured: true,
     icon: "%",
+    privacyNote:
+      "Calculations are performed directly in your browser. The numbers you enter are not uploaded to FreeTaskKit servers.",
+    howToUse: [
+      "Choose the percentage calculation that matches what you want to find.",
+      "Enter the required values in the input fields.",
+      "Review the result instantly and use the calculation guide if you need help choosing a formula.",
+    ],
+    faq: [
+      {
+        question: "Is the Percentage Calculator free to use?",
+        answer:
+          "Yes. The Percentage Calculator is free to use and does not require an account.",
+      },
+      {
+        question: "What percentage calculations are available?",
+        answer:
+          "The current version calculates a percentage of a number, what percentage one value is of another, percentage increase or decrease, and percentage difference.",
+      },
+      {
+        question: "What is the difference between percentage change and percentage difference?",
+        answer:
+          "Percentage change compares a new value with an original value. Percentage difference compares two values symmetrically without treating either one as the original.",
+      },
+      {
+        question: "Can I use decimal numbers?",
+        answer:
+          "Yes. Decimal values can be entered in the calculator.",
+      },
+      {
+        question: "Why can some calculations not use zero?",
+        answer:
+          "Some percentage formulas require division by a comparison or original value. Division by zero is undefined, so those calculations show an error when zero is used as the divisor.",
+      },
+      {
+        question: "Are my calculation values sent to a server?",
+        answer:
+          "No. The calculations happen locally in your browser, so the values you enter do not need to be uploaded to FreeTaskKit servers.",
+      },
+    ],
   },
   {
     id: "text-cleaner",
