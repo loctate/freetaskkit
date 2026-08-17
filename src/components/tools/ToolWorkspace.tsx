@@ -3,6 +3,7 @@ import { ToolPlaceholder } from "@/components/tools/ToolPlaceholder";
 import { ImageCompressorWorkspace } from "@/components/tools/image-compressor/ImageCompressorWorkspace";
 import { ImageResizerWorkspace } from "@/components/tools/image-resizer/ImageResizerWorkspace";
 import { QrCodeGeneratorWorkspace } from "@/components/tools/qr-code-generator/QrCodeGeneratorWorkspace";
+import { WhatsAppLinkGeneratorWorkspace } from "@/components/tools/whatsapp-link-generator/WhatsAppLinkGeneratorWorkspace";
 
 interface ToolWorkspaceProps {
   tool: Tool;
@@ -20,6 +21,9 @@ export function ToolWorkspace({
 
     case "qr-code-generator":
       return <QrCodeGeneratorWorkspace />;
+
+    case "whatsapp-link-generator":
+      return <WhatsAppLinkGeneratorWorkspace />;
 
     default:
       return (
