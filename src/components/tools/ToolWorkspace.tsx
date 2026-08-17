@@ -4,6 +4,7 @@ import { ImageCompressorWorkspace } from "@/components/tools/image-compressor/Im
 import { ImageResizerWorkspace } from "@/components/tools/image-resizer/ImageResizerWorkspace";
 import { QrCodeGeneratorWorkspace } from "@/components/tools/qr-code-generator/QrCodeGeneratorWorkspace";
 import { WhatsAppLinkGeneratorWorkspace } from "@/components/tools/whatsapp-link-generator/WhatsAppLinkGeneratorWorkspace";
+import { PercentageCalculatorWorkspace } from "@/components/tools/percentage-calculator/PercentageCalculatorWorkspace";
 
 interface ToolWorkspaceProps {
   tool: Tool;
@@ -24,6 +25,9 @@ export function ToolWorkspace({
 
     case "whatsapp-link-generator":
       return <WhatsAppLinkGeneratorWorkspace />;
+
+    case "percentage-calculator":
+      return <PercentageCalculatorWorkspace />;
 
     default:
       return (
