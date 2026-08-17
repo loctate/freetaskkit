@@ -165,17 +165,59 @@ export const tools: Tool[] = [
     slug: "whatsapp-link-generator",
     category: "business",
     description:
-      "Create a WhatsApp chat link with an optional ready-to-send message.",
+      "Create a direct WhatsApp chat link with an optional prefilled message.",
     shortDescription: "Create a direct WhatsApp chat link.",
     keywords: [
       "whatsapp link",
       "wa link",
       "click to chat",
       "whatsapp generator",
+      "whatsapp direct link",
+      "wa.me link",
+      "whatsapp message link",
     ],
-    status: "planned",
+    status: "published",
     featured: true,
     icon: "💬",
+    privacyNote:
+      "The WhatsApp number and message are processed directly in your browser. FreeTaskKit does not upload this information to its servers.",
+    howToUse: [
+      "Enter the WhatsApp number using a local Indonesian number or an international country code.",
+      "Add an optional prefilled message that should appear when the chat opens.",
+      "Open WhatsApp directly or copy the generated link to share it elsewhere.",
+    ],
+    faq: [
+      {
+        question: "Is the WhatsApp Link Generator free to use?",
+        answer:
+          "Yes. The WhatsApp Link Generator is free to use and does not require an account.",
+      },
+      {
+        question: "Are my phone number and message uploaded to a server?",
+        answer:
+          "No. The link is created locally in your browser, so the number and message do not need to be uploaded to FreeTaskKit servers.",
+      },
+      {
+        question: "Can I use an Indonesian phone number beginning with 0?",
+        answer:
+          "Yes. Indonesian numbers beginning with 0 are automatically converted to country code 62.",
+      },
+      {
+        question: "Can I use an international phone number?",
+        answer:
+          "Yes. Enter the number with its international country code. The generated WhatsApp link uses digits only.",
+      },
+      {
+        question: "Can I add a ready-to-send message?",
+        answer:
+          "Yes. The message is optional and is safely encoded into the generated WhatsApp link.",
+      },
+      {
+        question: "Does the tool send the WhatsApp message automatically?",
+        answer:
+          "No. The tool only creates or opens the WhatsApp chat link. You still review and send the message yourself in WhatsApp.",
+      },
+    ],
   },
   {
     id: "percentage-calculator",
