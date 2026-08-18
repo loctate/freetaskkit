@@ -286,17 +286,60 @@ export const tools: Tool[] = [
     slug: "text-cleaner",
     category: "text",
     description:
-      "Clean extra spaces, empty lines, and inconsistent formatting from text.",
+      "Clean extra spaces, empty lines, and inconsistent formatting from text directly in your browser.",
     shortDescription: "Clean and tidy text in seconds.",
     keywords: [
       "text cleaner",
       "remove extra spaces",
       "clean text",
       "format text",
+      "remove blank lines",
+      "trim text",
+      "normalize line breaks",
+      "clean copied text",
     ],
-    status: "planned",
+    status: "published",
     featured: true,
     icon: "✦",
+    privacyNote:
+      "Text cleaning happens directly in your browser. The text you paste is not uploaded to FreeTaskKit servers.",
+    howToUse: [
+      "Paste or type the text you want to clean into the original text box.",
+      "Turn the cleaning options on or off depending on the formatting you want to remove.",
+      "Review the cleaned result, compare the text statistics, and copy the finished text.",
+    ],
+    faq: [
+      {
+        question: "Is the Text Cleaner free to use?",
+        answer:
+          "Yes. The Text Cleaner is free to use and does not require an account.",
+      },
+      {
+        question: "What can the Text Cleaner remove?",
+        answer:
+          "The current version can trim spaces from each line, replace repeated spaces and tabs, remove empty lines, and normalize line breaks.",
+      },
+      {
+        question: "Can I choose which cleaning actions are applied?",
+        answer:
+          "Yes. Each cleaning option can be turned on or off independently.",
+      },
+      {
+        question: "Will the tool change my original text automatically?",
+        answer:
+          "No. Your original text remains in the input box while the cleaned version is shown separately in the result box.",
+      },
+      {
+        question: "What do the text statistics show?",
+        answer:
+          "The tool shows character, word, and line counts for both the original text and the cleaned result.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer:
+          "No. Text cleaning happens locally in your browser, so the text you paste does not need to be uploaded to FreeTaskKit servers.",
+      },
+    ],
   },
 ];
 
