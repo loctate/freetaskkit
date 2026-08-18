@@ -8,6 +8,10 @@ const footerLinks = [
   { name: "Privacy Policy", href: "/privacy-policy" },
   { name: "Terms of Use", href: "/terms-of-use" },
   { name: "Disclaimer", href: "/disclaimer" },
+  {
+    name: "Advertising Disclosure",
+    href: "/advertising-disclosure",
+  },
 ];
 
 export function SiteFooter() {
